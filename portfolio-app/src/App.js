@@ -5,14 +5,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to My Website</h1>
+        <h1>Brandon Yang</h1>
       </header>
       <main>
         <h2>About Me</h2>
-        <p>This is a simple website built with React!</p>
+        <p>I am Brandon, A senior at Moravian University stuyding Computer Science.</p>
       </main>
       <footer>
-        <p>© 2023 My Website</p>
+        <p>© 2024 My Website</p>
       </footer>
     </div>
   );
