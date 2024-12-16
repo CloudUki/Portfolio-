@@ -4,4 +4,6 @@ Here is my portfolio that I transferred into a website that I built with HTML (B
 My next plans is to implement React.
 
 
-- To make the scss file automatically update the css file, run sass --watch styles.scss:styles.css
+- To make the scss file automatically update the css file, run
+```sh
+sass --watch styles.scss:styles.css
