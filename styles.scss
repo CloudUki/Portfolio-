@@ -6,15 +6,36 @@ body {
     padding: 0;
 
     header {
-        background-color: blue;
+        background-color: black;
         color: white;
         padding: 10px 0;
         text-align: center;
+
+        .topnav #myLinks {
+            display: none; /* Hide links by default */
+        }
     }
 
     main {
         padding: 20px;
         background-color: black;
+
+        #about {
+            .col {
+                .row {
+                    h2 {
+                        font-size: 45px;
+                        color: white;
+                    }
+        
+                    p {
+                        color: white;
+                        font-weight: bold;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
     }
 
     footer{
@@ -31,16 +52,110 @@ body {
         font-size: 1em;
         padding: 5px 0;
 
-        a:hover, a:visited {
-            color: white;
-            text-decoration: none;
-
+        .topnav {
+            overflow: hidden;
+            background-color: black;
+            position: relative;
         }
         
+        .topnav a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            display: block; /* Display links vertically in smaller screens */
+        }
+        
+        .topnav .logo {
+            display: block;
+            position: relative;
+            text-decoration: none;
+            font-family: Bebas Neue;
+            font-weight: bold;
+            font-size: 30px;
+            right: 125px;
+        }
+        
+        .topnav #myLinks {
+            display: block; /* Hide links by default */
+        }
+        
+        .topnav a.icon {
+            color: white;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 6px;
+            padding: 14px 16px;
+        }
+        
+        .topnav a:hover {
+            color: white;
+        }
+        
+        .active {
+            background-color: white;
+            color: white;
+        }
     }
 
     main {
         padding: 5px;
+        font-family: Bebas Neue;
+
+        #about {
+            .col {
+                .row {
+                    h2 {
+                        font-size: 45px;
+                        color: white;
+                    }
+        
+                    p {
+                        color: white;
+                        font-weight: bold;
+                        font-size: 25px;
+                    }
+        
+                    .top_buttons {
+                        width: auto;
+                        height: auto;
+        
+                        &.contact_button {
+                            position: relative;
+                            top: 20px;
+                        }
+        
+                        &.linkedin {
+                            position: relative;
+                            top: 20px;
+                            left: 25px;
+                        }
+        
+                        &.github {
+                            position: relative;
+                            top: 20px;
+                            left: 50px;
+                        }
+                    }
+        
+                    #me {
+                        position: relative;
+                        top: 50px;
+                        border-radius: 2%; /* Corrected percentage */
+                    }
+                }
+            }
+        }
+        
+
+        #projects{
+            color: white;
+        }
+
+        #contact{
+            color: white;
+        }
     }
 }
 @media (min-width: 481px) and (max-width: 768px) {

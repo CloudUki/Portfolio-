@@ -6,14 +6,26 @@ body {
   padding: 0;
 }
 body header {
-  background-color: blue;
+  background-color: black;
   color: white;
   padding: 10px 0;
   text-align: center;
 }
+body header .topnav #myLinks {
+  display: none; /* Hide links by default */
+}
 body main {
   padding: 20px;
   background-color: black;
+}
+body main #about .col .row h2 {
+  font-size: 45px;
+  color: white;
+}
+body main #about .col .row p {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
 }
 body footer {
   background-color: black;
@@ -28,12 +40,86 @@ body footer {
     font-size: 1em;
     padding: 5px 0;
   }
-  header a:hover, header a:visited {
+  header .topnav {
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+  }
+  header .topnav a {
     color: white;
+    padding: 14px 16px;
     text-decoration: none;
+    font-size: 17px;
+    display: block; /* Display links vertically in smaller screens */
+  }
+  header .topnav .logo {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-weight: bold;
+    font-size: 30px;
+    right: 125px;
+  }
+  header .topnav #myLinks {
+    display: block; /* Hide links by default */
+  }
+  header .topnav a.icon {
+    color: white;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    padding: 14px 16px;
+  }
+  header .topnav a:hover {
+    color: white;
+  }
+  header .active {
+    background-color: white;
+    color: white;
   }
   main {
     padding: 5px;
+    font-family: Bebas Neue;
+  }
+  main #about .col .row h2 {
+    font-size: 45px;
+    color: white;
+  }
+  main #about .col .row p {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  main #about .col .row .top_buttons {
+    width: auto;
+    height: auto;
+  }
+  main #about .col .row .top_buttons.contact_button {
+    position: relative;
+    top: 20px;
+  }
+  main #about .col .row .top_buttons.linkedin {
+    position: relative;
+    top: 20px;
+    left: 25px;
+  }
+  main #about .col .row .top_buttons.github {
+    position: relative;
+    top: 20px;
+    left: 50px;
+  }
+  main #about .col .row #me {
+    position: relative;
+    top: 50px;
+    border-radius: 2%; /* Corrected percentage */
+  }
+  main #projects {
+    color: white;
+  }
+  main #contact {
+    color: white;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
