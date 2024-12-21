@@ -38,6 +38,10 @@ body {
         }
     }
 
+    #contact{
+        background-color: black;
+    }
+
     footer{
         background-color: black;
         color: white;
@@ -97,51 +101,61 @@ body {
             background-color: white;
             color: white;
         }
+
+        .nav_divider{ 
+            position: relative;
+            top: 10px;
+            width: 100vw;
+            border: 10px solid white;
+            margin: 0;
+            opacity: 1;
+        }
     }
 
     main {
         padding: 5px;
         font-family: Bebas Neue;
+        color: white;
+
+        h2 {
+            font-size: 50px;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 25px;
+            color: #C7C7C7;
+        }
 
         #about {
             .col {
                 .row {
-                    h2 {
-                        font-size: 45px;
-                        color: white;
-                    }
-        
-                    p {
-                        color: white;
-                        font-weight: bold;
-                        font-size: 25px;
-                    }
-        
-                    .top_buttons {
-                        width: auto;
-                        height: auto;
-        
-                        &.contact_button {
-                            position: relative;
-                            top: 20px;
-                        }
-        
-                        &.linkedin {
-                            position: relative;
-                            top: 20px;
-                            left: 25px;
-                        }
-        
-                        &.github {
-                            position: relative;
-                            top: 20px;
-                            left: 50px;
+                    a {
+                        .top_buttons {
+                            width: auto;
+                            height: auto;
+            
+                            &.contact_button {
+                                position: relative;
+                                top: 20px;
+                            }
+            
+                            &.linkedin_button {
+                                position: relative;
+                                bottom: 42px;
+                                left: 200px;
+                            }
+            
+                            &.github_button {
+                                position: relative;
+                                bottom: 103px;
+                                left: 300px;
+                            }
                         }
                     }
-        
                     #me {
                         position: relative;
-                        top: 50px;
+                        bottom: 50px;
                         border-radius: 2%; /* Corrected percentage */
                     }
                 }
@@ -149,12 +163,77 @@ body {
         }
         
 
-        #projects{
-            color: white;
+        #projects {
+            .projects_divider{
+                position: relative;
+                top: 10px;
+                right: 20px;
+                width: 100vw;
+                border: 10px solid white;
+                margin: 0;
+                opacity: 1;
+            }
+            .container-fluid {
+                .row {
+                    h2 {
+                        position: relative;
+                        top: 35px;
+                    }
+                    p {
+                        position: relative;
+                        top: 40px;
+                        font-size: 24px;
+                        color: #C7C7C7;
+                    }
+                }
+
+                .ca_co_header{
+                    position: relative;
+                    top: 60px;
+                    #ca_co {
+                        position: relative;
+                        display: block;
+                        top: 10px;
+                        right: 33px;
+                        width: 100vw;
+                        height: 100%;
+                    }
+
+                    #ca_co_info{
+                        display: flex;
+                        justify-content: space-between;
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        width: 625px;
+
+                        .ca_co_one{
+                            
+                        }
+
+                        .ca_co_two{
+
+                        }
+                    }
+                    .ca_co_desc{
+                        color: #C7C7C7;
+                    }
+                    .ca_co_title{
+                        color: white;
+                        font-size: 35px;
+                    }
+                }
+            }
         }
+        
 
         #contact{
             color: white;
+        }
+
+        #footer{
+            color: white;
+            font-size: 10px;
         }
     }
 }

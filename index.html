@@ -25,6 +25,7 @@
                 <i class="fa-solid fa-bars"></i>
             </a>
         </div>
+        <hr class="nav_divider"> 
     </header>
 
     <!-- Main -->
@@ -42,9 +43,21 @@
             </div>
             <div class="col">
                 <div class="row">
-                    <img class="top_buttons contact_button" src="assets/contact_button.png" alt="Contact Button">
-                    <img class="top_buttons linkedin" src="assets/linkedin_button.png" alt="LinkedIn Button">
-                    <img class="top_buttons github" src="assets/github_button.png" alt="GitHub Button">
+                    <div class="contact">
+                        <a class="btn" href="#contact">
+                            <img class="top_buttons contact_button" src="assets/contact_button.png" alt="Contact Button">
+                        </a>
+                    </div>
+                    <div class="linkedin">
+                        <a class="btn" href="https://www.linkedin.com/in/brandonyyang/" target="_blank">
+                            <img class="top_buttons linkedin_button" src="assets/linkedin_button.png" alt="LinkedIn Button">
+                        </a>
+                    </div>
+                    <div class="github">
+                        <a class="btn" href="https://github.com/CloudUki" target="_blank">
+                            <img class="top_buttons github_button" src="assets/github_button.png" alt="GitHub Button">
+                        </a>
+                    </div>
                     <img id="me" src="assets/me.jpg" alt="Me">
                 </div>
             </div>
@@ -52,19 +65,47 @@
 
         <!-- Projects -->
         <section id="projects">
-            <h2>Projects</h2>
-            <!-- Add your projects here -->
+            <hr class="projects_divider">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 order-0 projects_intro">
+                        <h2>Featured Projects</h2>
+                        <p>Here are some of the projects I have worked on that showcase my passion for <br> software engineering.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 order-0">
+                        <div class="ca_co_header">
+                            <strong style="font-size: 55px;"> Calcium + Company</strong>
+                            <img id="ca_co" src="assets/Ca+Co.jpeg" alt="Ca+Co">
+                            <p class="ca_co_desc">Built a company website using JavaScript, HTML, Bootstrap, SCSS and Figma, collaborating
+                                closely with other departments to align functionality and design with company goals.
+                                Delivered a fully responsive website that helped with user engagment.
+                            </p>
+                            <p class="ca_co_title">Project Info</p>
+                            <ul id="ca_co_info" class="ca_co_one list-group-horizontal clearfix split-items">
+                                <li class="list-group-item left-side">Year:</li>
+                                <li class="list-group-item right-side">2024</li>
+                            </ul>
+                            <ul id="ca_co_info" class="ca_co_two list-group-horizontal clearfix split-items">
+                                <li class="list-group-item left-side">Role:</li>
+                                <li class="list-group-item right-side">Technology Intern</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Contact -->
-        <section id="contact">
+        <section id="contact" style="display: none;">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:brandon.yang1210@gmail.com">brandon.yang1210@gmail.com</a></p>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer style="display: none;">
         <p>&copy; 2024 Brandon Yang. All rights reserved.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -27,6 +27,9 @@ body main #about .col .row p {
   font-weight: bold;
   font-size: 25px;
 }
+body #contact {
+  background-color: black;
+}
 body footer {
   background-color: black;
   color: white;
@@ -79,47 +82,102 @@ body footer {
     background-color: white;
     color: white;
   }
+  header .nav_divider {
+    position: relative;
+    top: 10px;
+    width: 100vw;
+    border: 10px solid white;
+    margin: 0;
+    opacity: 1;
+  }
   main {
     padding: 5px;
     font-family: Bebas Neue;
-  }
-  main #about .col .row h2 {
-    font-size: 45px;
     color: white;
   }
-  main #about .col .row p {
-    color: white;
+  main h2 {
+    font-size: 50px;
+  }
+  main p {
     font-weight: bold;
     font-size: 25px;
+    color: #C7C7C7;
   }
-  main #about .col .row .top_buttons {
+  main #about .col .row a .top_buttons {
     width: auto;
     height: auto;
   }
-  main #about .col .row .top_buttons.contact_button {
+  main #about .col .row a .top_buttons.contact_button {
     position: relative;
     top: 20px;
   }
-  main #about .col .row .top_buttons.linkedin {
+  main #about .col .row a .top_buttons.linkedin_button {
     position: relative;
-    top: 20px;
-    left: 25px;
+    bottom: 42px;
+    left: 200px;
   }
-  main #about .col .row .top_buttons.github {
+  main #about .col .row a .top_buttons.github_button {
     position: relative;
-    top: 20px;
-    left: 50px;
+    bottom: 103px;
+    left: 300px;
   }
   main #about .col .row #me {
     position: relative;
-    top: 50px;
+    bottom: 50px;
     border-radius: 2%; /* Corrected percentage */
   }
-  main #projects {
+  main #projects .projects_divider {
+    position: relative;
+    top: 10px;
+    right: 20px;
+    width: 100vw;
+    border: 10px solid white;
+    margin: 0;
+    opacity: 1;
+  }
+  main #projects .container-fluid .row h2 {
+    position: relative;
+    top: 35px;
+  }
+  main #projects .container-fluid .row p {
+    position: relative;
+    top: 40px;
+    font-size: 24px;
+    color: #C7C7C7;
+  }
+  main #projects .container-fluid .ca_co_header {
+    position: relative;
+    top: 60px;
+  }
+  main #projects .container-fluid .ca_co_header #ca_co {
+    position: relative;
+    display: block;
+    top: 10px;
+    right: 33px;
+    width: 100vw;
+    height: 100%;
+  }
+  main #projects .container-fluid .ca_co_header #ca_co_info {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 625px;
+  }
+  main #projects .container-fluid .ca_co_header .ca_co_desc {
+    color: #C7C7C7;
+  }
+  main #projects .container-fluid .ca_co_header .ca_co_title {
     color: white;
+    font-size: 35px;
   }
   main #contact {
     color: white;
+  }
+  main #footer {
+    color: white;
+    font-size: 10px;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
