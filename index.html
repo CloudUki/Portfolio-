@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Nav -->
@@ -36,7 +37,7 @@
             <div class="col-12 order-0">
                 <div class="row">
                     <h2>Hi, I Am Brandon Yang.</h2>
-                    <p>A Senior at Moravian University majoring in Computer Science, 
+                    <p id="bio">A Senior at Moravian University majoring in Computer Science, 
                         passionate about building accessible and user friendly websites.
                     </p>
                 </div>
@@ -75,22 +76,70 @@
                 </div>
                 <div class="row">
                     <div class="col-12 order-0">
-                        <div class="ca_co_header">
+
+                        <!--Ca+Co-->
+                        <div class="ca_co_section">
                             <strong style="font-size: 55px;"> Calcium + Company</strong>
-                            <img id="ca_co" src="assets/Ca+Co.jpeg" alt="Ca+Co">
-                            <p class="ca_co_desc">Built a company website using JavaScript, HTML, Bootstrap, SCSS and Figma, collaborating
+                            <img id="ca_co_img" src="assets/Ca+Co.jpeg" alt="Ca+Co">
+                            <p class="ca_co_desc">
+                                Built a company website using JavaScript, HTML, Bootstrap, SCSS and Figma, collaborating
                                 closely with other departments to align functionality and design with company goals.
                                 Delivered a fully responsive website that helped with user engagment.
                             </p>
                             <p class="ca_co_title">Project Info</p>
                             <ul id="ca_co_info" class="ca_co_one list-group-horizontal clearfix split-items">
                                 <li class="list-group-item left-side">Year:</li>
-                                <li class="list-group-item right-side">2024</li>
+                                <li class="list-group-item right-side">Summer 2024</li>
                             </ul>
                             <ul id="ca_co_info" class="ca_co_two list-group-horizontal clearfix split-items">
                                 <li class="list-group-item left-side">Role:</li>
                                 <li class="list-group-item right-side">Technology Intern</li>
                             </ul>
+                            <p><a href="https://calciumco.com/" class="ca-co-demo link-underline link-underline-opacity-0"> Live Demo </a></p>
+                        </div>
+
+                        <!--MU Cloud-->
+                        <div class="mu_cloud_section">
+                            <strong class="mu_cloud"> Moravian University Cloud Project</strong>
+                            <img id="mu_cloud_img" src="assets/mu-cloud.jpeg" alt="MU Cloud">
+                            <p class="mu_cloud_desc">
+                                Collaborated as part of a team to design and deploy a dynamic website integrating AWS services
+                                with the front end. Utilized skills in JavaScript (React), HTML5, CSS, Python (Flask), Amazon
+                                DynamoDB, Amazon API Gateway, Amazon EC2, AWS Amplify and AWS Lambda to create and
+                                launch a user-friendly experience.
+                            </p>
+                            <p class="mu_cloud_title">Project Info</p>
+                            <ul id="mu_cloud_info" class="mu_cloud_one list-group-horizontal clearfix split-items">
+                                <li class="list-group-item left-side">Year:</li>
+                                <li class="list-group-item right-side">Fall 2024</li>
+                            </ul>
+                            <ul id="mu_cloud_info" class="mu_cloud_two list-group-horizontal clearfix split-items">
+                                <li class="list-group-item left-side">Role:</li>
+                                <li class="list-group-item right-side">Group Project</li>
+                            </ul>
+                            <p><a href="https://github.com/CloudUki/AWS-Checkers" class="mu_cloud_github link-underline link-underline-opacity-0"> Source Code </a></p>
+                        </div>
+
+                        <!--MU Basketball-->
+                        <div class="mu_bball_section">
+                            <strong class="mu_bball"> Moravian University Software Engineer Project</strong>
+                            <img id="mu_bball_img" src="assets/mu_bball.jpeg" alt="MU Bball">
+                            <p class="mu_bball_desc">
+                                Collaborated as part of a team to design and deploy a dynamic website integrating AWS services
+                                with the front end. Utilized skills in JavaScript (React), HTML5, CSS, Python (Flask), Amazon
+                                DynamoDB, Amazon API Gateway, Amazon EC2, AWS Amplify and AWS Lambda to create and
+                                launch a user-friendly experience.
+                            </p>
+                            <p class="mu_bball_title">Project Info</p>
+                            <ul id="mu_bball_info" class="mu_bball_one list-group-horizontal clearfix split-items">
+                                <li class="list-group-item left-side">Year:</li>
+                                <li class="list-group-item right-side">Spring 2024</li>
+                            </ul>
+                            <ul id="mu_bball_info" class="mu_bball_two list-group-horizontal clearfix split-items">
+                                <li class="list-group-item left-side">Role:</li>
+                                <li class="list-group-item right-side">Group Project</li>
+                            </ul>
+                            <p><a href="https://github.com/CloudUki/CS_Moravian_Bball_project" class="mu_bball_github link-underline link-underline-opacity-0"> Source Code </a></p>
                         </div>
                     </div>
                 </div>
@@ -98,9 +147,9 @@
         </section>
 
         <!-- Contact -->
-        <section id="contact" style="display: none;">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:brandon.yang1210@gmail.com">brandon.yang1210@gmail.com</a></p>
+        <section id="contact">
+            <h2>Lets Connect!</h2>
+            <p>Email: <a href="mailto:brandon.yang1210@gmail.com" class="email_tag">brandon.yang1210@gmail.com</a></p>
         </section>
     </main>
 
