@@ -1,52 +1,55 @@
 /* Base styles */
 html, body {
-  height: 100%; /* Ensure the height covers the full viewport */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  background-color: black; /* Set black background */
-  color: white; /* Set default text color to white */
+  height: 100%;
+  margin: 0;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-  background-color: black;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 body header {
   background-color: black;
   color: white;
-  padding: 10px 0;
+  padding: 0.6rem 0;
   text-align: center;
 }
 body header .topnav #myLinks {
   display: none; /* Hide links by default */
 }
 body main {
-  padding: 20px;
+  padding: 1.2rem;
   background-color: black;
+  flex: 1;
 }
-body main #about .col .row h2 {
-  font-size: 45px;
+body main h2 {
+  font-size: 2.8rem;
   color: white;
 }
-body main #about .col .row p {
+body main p {
   color: white;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 body footer {
-  background-color: black;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 1.5rem 0;
+  width: 100%;
+  margin-top: auto;
 }
 
 /* Media queries */
 @media (max-width: 480px) {
   header {
     font-size: 1em;
-    padding: 5px 0;
+    padding: 0.3rem 0;
   }
   header .topnav {
     overflow: hidden;
@@ -55,9 +58,9 @@ body footer {
   }
   header .topnav a {
     color: white;
-    padding: 14px 16px;
+    padding: 0.8rem 1rem;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1rem;
     display: block; /* Display links vertically in smaller screens */
   }
   header .topnav .logo {
@@ -66,7 +69,7 @@ body footer {
     text-decoration: none;
     font-family: Bebas Neue;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 1.8rem;
     right: 125px;
   }
   header .topnav #myLinks {
@@ -78,7 +81,7 @@ body footer {
     position: absolute;
     right: 0;
     top: 6px;
-    padding: 14px 16px;
+    padding: 0.8rem 1rem;
   }
   header .topnav a:hover {
     color: white;
@@ -96,16 +99,16 @@ body footer {
     opacity: 1;
   }
   main {
-    padding: 5px;
+    padding: 0.3rem;
     font-family: Bebas Neue;
     color: white;
   }
   main h2 {
-    font-size: 50px;
+    font-size: 3rem;
   }
   main p {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.5rem;
     color: #C7C7C7;
   }
   main #about .col .row #bio {
@@ -151,7 +154,7 @@ body footer {
     font-family: Manrope;
     position: relative;
     top: 40px;
-    font-size: 18px;
+    font-size: 1.1rem;
     color: #C7C7C7;
   }
   main #projects .container-fluid .ca_co_section {
@@ -195,8 +198,8 @@ body footer {
     text-align: right;
   }
   main #projects .container-fluid .ca_co_section #ca_co_info .list-group-item {
-    padding: 5px 10px;
-    font-size: 25px;
+    padding: 0.3rem 0.6rem;
+    font-size: 1.5rem;
     word-wrap: break-word;
     border: none;
   }
@@ -205,14 +208,14 @@ body footer {
   }
   main #projects .container-fluid .ca_co_section #ca_co_info .list-group-item .right-side {
     text-align: right;
-    padding-right: 300px;
+    padding-right: 18.7rem;
   }
   main #projects .container-fluid .ca_co_section .ca_co_desc {
     color: #C7C7C7;
   }
   main #projects .container-fluid .ca_co_section .ca_co_title {
     color: white;
-    font-size: 45px;
+    font-size: 2.8rem;
     font-family: Bebas Neue;
   }
   main #projects .container-fluid .mu_cloud_section {
@@ -222,7 +225,7 @@ body footer {
   main #projects .container-fluid .mu_cloud_section .mu_cloud {
     position: relative;
     display: block;
-    font-size: 45px;
+    font-size: 2.8rem;
     top: 100px;
   }
   main #projects .container-fluid .mu_cloud_section .mu_cloud_github {
@@ -250,7 +253,7 @@ body footer {
     position: relative;
     top: 170px;
     color: white;
-    font-size: 45px;
+    font-size: 2.8rem;
     font-family: Bebas Neue;
   }
   main #projects .container-fluid .mu_cloud_section #mu_cloud_info {
@@ -273,8 +276,8 @@ body footer {
     text-align: right;
   }
   main #projects .container-fluid .mu_cloud_section #mu_cloud_info .list-group-item {
-    padding: 5px 10px;
-    font-size: 25px;
+    padding: 0.3rem 0.6rem;
+    font-size: 1.5rem;
     word-wrap: break-word;
     border: none;
   }
@@ -283,7 +286,7 @@ body footer {
   }
   main #projects .container-fluid .mu_cloud_section #mu_cloud_info .list-group-item .right-side {
     text-align: right;
-    padding-right: 300px;
+    padding-right: 18.7rem;
   }
   main #projects .container-fluid .mu_bball_section {
     position: relative;
@@ -292,7 +295,7 @@ body footer {
   main #projects .container-fluid .mu_bball_section .mu_bball {
     position: relative;
     display: block;
-    font-size: 40px;
+    font-size: 2.5rem;
     top: 130px;
   }
   main #projects .container-fluid .mu_bball_section .mu_bball_github {
@@ -320,7 +323,7 @@ body footer {
     position: relative;
     top: 200px;
     color: white;
-    font-size: 45px;
+    font-size: 2.8rem;
     font-family: Bebas Neue;
   }
   main #projects .container-fluid .mu_bball_section #mu_bball_info {
@@ -343,8 +346,8 @@ body footer {
     text-align: right;
   }
   main #projects .container-fluid .mu_bball_section #mu_bball_info .list-group-item {
-    padding: 5px 10px;
-    font-size: 25px;
+    padding: 0.3rem 0.6rem;
+    font-size: 1.5rem;
     word-wrap: break-word;
     border: none;
   }
@@ -353,19 +356,20 @@ body footer {
   }
   main #projects .container-fluid .mu_bball_section #mu_bball_info .list-group-item .right-side {
     text-align: right;
-    padding-right: 300px;
+    padding-right: 18.7rem;
   }
-  main #contact {
-    color: white;
+  main footer .footer_divider {
     position: relative;
-    top: 400px;
+    right: 20px;
+    width: 100vw;
+    border: 10px solid white;
+    margin: 0;
+    opacity: 1;
   }
-  main #contact .email_tag {
-    color: #D3E97A;
-  }
-  main #footer {
-    color: white;
-    font-size: 10px;
+  main footer footer p {
+    margin: 0.3rem 0;
+    font-size: 0.7rem;
+    color: #C7C7C7;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -374,7 +378,7 @@ body footer {
     font-size: 1.4em;
   }
   main {
-    padding: 15px;
+    padding: 0.9rem;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -383,7 +387,7 @@ body footer {
     font-size: 1.6em;
   }
   main {
-    padding: 25px;
+    padding: 1.5rem;
   }
 }
 @media (min-width: 1025px) {
@@ -392,7 +396,7 @@ body footer {
     font-size: 1.8em;
   }
   main {
-    padding: 30px;
+    padding: 1.8rem;
   }
 }
 
