@@ -1,454 +1,504 @@
 /* Base styles */
+// SCSS for Mobile Version of Brandon's Portfolio
+
+// Variables
+$primary-font: Bebas Neue;
+$secondary-font: Manrope;
+
 html, body {
-    height: 100%;
-    margin: 0;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  margin: 0;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; 
+  font-family: $primary-font;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 
-    header {
-        background-color: black;
-        color: white;
-        padding: .6rem 0;
-        text-align: center;
+  header {
+    background-color: black;
+    color: white;
+    padding: 0.6rem 0;
+    text-align: center;
 
-        .topnav #myLinks {
-            display: none; /* Hide links by default */
-        }
+    .topnav #myLinks {
+      display: none; /* Hide links by default */
+    }
+  }
+
+  main {
+    padding: 1.2rem;
+    background-color: black;
+    flex: 1;
+
+    h2 {
+      font-size: 2.8rem;
+      color: white;
     }
 
-    main {
-        padding: 1.2rem;
-        background-color: black;
-        flex: 1;
-
-        h2 {
-            font-size: 2.8rem;
-            color: white;
-        }
-
-        p {
-            color: white;
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
+    p {
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
     }
+  }
 
-    footer{
-        color: white;
-        text-align: center;
-        padding: 1.5rem 0;
-        width: 100%;
-        margin-top: auto;
-    }
+  footer {
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    width: 100%;
+    margin-top: auto;
+  }
 }
 
 /* Media queries */
 @media (max-width: 480px) {
-    header {
-        font-size: 1em;
-        padding: .3rem 0;
+  /* Phone styles */
+  header {
+    font-size: 1rem;
+    padding: 0.3rem 0;
 
-        .topnav {
-            overflow: hidden;
-            background-color: black;
-            position: relative;
-        }
-        
-        .topnav a {
-            color: white;
-            padding: .8rem 1rem;
-            text-decoration: none;
-            font-size: 1rem;
-            display: block; /* Display links vertically in smaller screens */
-        }
-        
-        .topnav .logo {
-            display: block;
-            position: relative;
-            text-decoration: none;
-            font-family: Bebas Neue;
-            font-weight: bold;
-            font-size: 1.8rem;
-            right: 125px;
-        }
-        
-        .topnav #myLinks {
-            display: block; /* Hide links by default */
-        }
-        
-        .topnav a.icon {
-            color: white;
-            display: block;
+    .topnav {
+      overflow: hidden;
+      background-color: black;
+      position: static;
+      transform: translateY(5px);
+    }
+
+    .topnav a {
+      color: white;
+      padding: 0.8rem 1rem;
+      text-decoration: none;
+      font-size: 1rem;
+      display: block; /* Display links vertically in smaller screens */
+    }
+
+    .topnav .logo {
+      display: block;
+      position: static;
+      text-decoration: none;
+      font-family: $primary-font;
+      font-weight: bold;
+      font-size: 1.8rem;
+      transform: translateX(-128px);
+    }
+
+    .topnav #myLinks {
+      display: block; /* Hide links by default */
+    }
+
+    .topnav a.icon {
+      color: white;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 6px;
+      padding: 0.8rem 1rem;
+    }
+
+    .topnav a:hover {
+      color: white;
+    }
+
+    .active {
+      background-color: white;
+      color: white;
+    }
+
+    .nav_divider {
+      position: static;
+      width: 100vw;
+      border: 10px solid white;
+      margin: 0;
+      opacity: 1;
+    }
+  }
+
+  main {
+    padding: 0.3rem;
+    font-family: $primary-font;
+    color: white;
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #C7C7C7;
+    }
+
+    #about {
+      .col {
+        .row {
+          #bio {
+            font-family: $secondary-font;
+          }
+          a {
+            .top_buttons {
+              width: auto;
+              height: auto;
+
+              &.contact_button {
+                position: absolute;
+                top: 320px;
+              }
+
+              &.linkedin_button {
+                position: absolute;
+                top: 320px;
+                left: 230px;
+              }
+
+              &.github_button {
+                position: absolute;
+                top: 320px;
+                left: 314px;
+              }
+            }
+          }
+          #me {
             position: absolute;
-            right: 0;
-            top: 6px;
-            padding: .8rem 1rem;
+            top: 385px;
+            right: 0px;
+            border-radius: 2%; /* Corrected percentage */
+          }
         }
-        
-        .topnav a:hover {
-            color: white;
-        }
-        
-        .active {
-            background-color: white;
-            color: white;
-        }
-
-        .nav_divider{ 
-            position: relative;
-            top: 10px;
-            width: 100vw;
-            border: 10px solid white;
-            margin: 0;
-            opacity: 1;
-        }
+      }
     }
 
-    main {
-        padding: .3rem;
-        font-family: Bebas Neue;
-        color: white;
-
-        h2 {
-            font-size: 3rem;
-        }
-
-        p {
-            font-weight: bold;
-            font-size: 1.5rem;
+    #projects {
+      .projects_divider {
+        position: absolute;
+        top: 1000px;
+        right: 0rem;
+        width: 100vw;
+        border: 10px solid white;
+        margin: 0;
+        opacity: 1;
+      }
+      .container-fluid {
+        .row {
+          h2 {
+            position: absolute;
+            top: 23.5em;
+            left: 20px;
+          }
+          p {
+            font-family: $secondary-font;
+            position: absolute;
+            top: 63.5em;
+            left: 20px;
+            font-size: 1.1rem;
             color: #C7C7C7;
+          }
         }
 
-        #about {
-            .col {
-                .row {
-                    #bio{
-                        font-family: Manrope;
-                    }
-                    a {
-                        .top_buttons {
-                            width: auto;
-                            height: auto;
-            
-                            &.contact_button {
-                                position: relative;
-                                top: 20px;
-                            }
-            
-                            &.linkedin_button {
-                                position: relative;
-                                bottom: 42px;
-                                left: 200px;
-                            }
-            
-                            &.github_button {
-                                position: relative;
-                                bottom: 103px;
-                                left: 300px;
-                            }
-                        }
-                    }
-                    #me {
-                        position: relative;
-                        bottom: 50px;
-                        border-radius: 2%; /* Corrected percentage */
-                    }
-                }
-            }
-        }
-        
+        //Ca+Co Section
+        .ca_co_section {
+          padding: 20px;
+          max-width: 100%;
+          margin: auto;
 
-        #projects {
-            .projects_divider{
-                position: relative;
-                top: 10px;
-                right: 20px;
-                width: 100vw;
-                border: 10px solid white;
-                margin: 0;
-                opacity: 1;
-            }
-            .container-fluid {
-                .row {
-                    h2 {
-                        position: relative;
-                        top: 35px;
-                    }
-                    p {
-                        font-family: Manrope;
-                        position: relative;
-                        top: 40px;
-                        font-size: 1.1rem;
-                        color: #C7C7C7;
-                    }
-                }
+          #ca_co_start {
+            position: absolute;
+            display: block;
+            top: 79rem;
+            left: 20px;
+          }
+          #ca_co_img {
+            position: absolute;
+            display: block;
+            transform: translateY(60rem);
+            right: 0px;
+            width: 100vw;
+            height: auto;
+          }
 
-                //Ca+Co Section
-                .ca_co_section{
-                    position: relative;
-                    top: 60px;
-                    #ca_co_img {
-                        position: relative;
-                        display: block;
-                        top: 10px;
-                        right: 33px;
-                        width: 100vw;
-                        height: 100%;
-                    }
+          .ca-co-demo {
+            position: relative;
+            text-decoration: none;
+            color: #D3E97A;
+            top: 840px;
+            transform: translateY(1200px);
+            pointer-events: auto;
+            cursor: pointer;
+            z-index: 10;
+          }
 
-                    .ca-co-demo{
-                        position: relative;
-                        text-decoration: none;
-                        color: #D3E97A;
-                        top: 15px;
-                        pointer-events: auto;
-                        cursor: pointer;
-                        z-index: 10;
-                    }
+          .ca_co_info {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+            width: 100%;
+            overflow: hidden;
 
-                    #ca_co_info{
-                        display: flex;
-                        position: relative;
-                        justify-content: space-between;
-                        list-style: none;
-                        padding: 0;
-                        margin: 0 0 15px 0;
-                        top: 50px;
-                        width: 100%;
-                        overflow: hidden;
-                        .ca_co_one{
-                            flex: 1;
-                            text-align: left;
-                        }
-
-                        .ca_co_two{
-                            flex: 1;
-                            text-align: right;
-                        }
-
-                        .list-group-item{
-                            padding: .3rem .6rem;
-                            font-size: 1.5rem;
-                            word-wrap: break-word;
-                            border: none;
-
-                            .left-side{
-                                text-align: left;
-                            }
-
-                            .right-side{
-                                text-align: right;
-                                padding-right: 18.7rem;
-                            }
-                        }
-                    }
-                    .ca_co_desc{
-                        color: #C7C7C7;
-                    }
-                    .ca_co_title{
-                        color: white;
-                        font-size: 2.8rem;
-                        font-family: Bebas Neue;
-                    }
-                }
-
-                //MU Cloud Section
-                .mu_cloud_section{
-                    position: relative;
-                    top: 60px;
-    
-                    .mu_cloud{
-                        position: relative;
-                        display: block;
-                        font-size: 2.8rem;
-                        top: 100px;
-                    }
-
-                    .mu_cloud_github{
-                        position: relative;
-                        text-decoration: none;
-                        color: #D3E97A;
-                        top: 140px;
-                        pointer-events: auto;
-                        cursor: pointer;
-                        z-index: 10;
-                    }
-    
-                    #mu_cloud_img{
-                        position: relative;
-                        display: block;
-                        top: 130px;
-                        right: 33px;
-                        width: 100vw;
-                        height: 100%;
-                    }
-
-                    .mu_cloud_desc{
-                        position: relative; 
-                        top: 165px;
-                    }
-    
-                    .mu_cloud_title{
-                        position: relative;
-                        top: 170px;
-                        color: white;
-                        font-size: 2.8rem;
-                        font-family: Bebas Neue;
-                    }
-    
-                    #mu_cloud_info{
-                        display: flex;
-                        position: relative;
-                        justify-content: space-between;
-                        list-style: none;
-                        padding: 0;
-                        margin: 0 0 15px 0;
-                        top: 175px;
-                        width: 100%;
-                        overflow: hidden;
-
-                        .mu_cloud_one{
-                            flex: 1;
-                            text-align: left;
-                        }
-    
-                        .mu_cloud_two{
-                            flex: 1;
-                            text-align: right;
-                        }
-
-                        .list-group-item{
-                            padding: .3rem .6rem;
-                            font-size: 1.5rem;
-                            word-wrap: break-word;
-                            border: none;
-
-                            .left-side{
-                                text-align: left;
-                            }
-
-                            .right-side{
-                                text-align: right;
-                                padding-right: 18.7rem;
-                            }
-                        }
-                    }
-                }
-
-                //MU BBall Section
-                .mu_bball_section{
-                    position: relative;
-                    top: 150px;
-    
-                    .mu_bball{
-                        position: relative;
-                        display: block;
-                        font-size: 2.5rem;
-                        top: 130px;
-                    }
-
-                    .mu_bball_github{
-                        position: relative;
-                        text-decoration: none;
-                        color: #D3E97A;
-                        top: 175px;
-                        pointer-events: auto;
-                        cursor: pointer;
-                        z-index: 10;
-                    }
-    
-                    #mu_bball_img{
-                        position: relative;
-                        display: block;
-                        top: 160px;
-                        right: 33px;
-                        width: 100vw;
-                        height: 100%;
-                    }
-
-                    .mu_bball_desc{
-                        position: relative; 
-                        top: 195px;
-                    }
-    
-                    .mu_bball_title{
-                        position: relative;
-                        top: 200px;
-                        color: white;
-                        font-size: 2.8rem;
-                        font-family: Bebas Neue;
-                    }
-    
-                    #mu_bball_info{
-                        display: flex;
-                        position: relative;
-                        justify-content: space-between;
-                        list-style: none;
-                        padding: 0;
-                        margin: 0 0 15px 0;
-                        top: 210px;
-                        width: 100%;
-                        overflow: hidden;
-
-                        .mu_bball_one{
-                            flex: 1;
-                            text-align: left;
-                        }
-    
-                        .mu_bball_two{
-                            flex: 1;
-                            text-align: right;
-                        }
-
-                        .list-group-item{
-                            padding: .3rem .6rem;
-                            font-size: 1.5rem;
-                            word-wrap: break-word;
-                            border: none;
-
-                            .left-side{
-                                text-align: left;
-                            }
-
-                            .right-side{
-                                text-align: right;
-                                padding-right: 18.7rem;
-                            }
-                        }
-                    }
-                }
+            .ca_co_one {
+              flex: 1;
+              text-align: left;
             }
 
+            .ca_co_two {
+              flex: 1;
+              text-align: right;
+            }
+
+            .list-group-item {
+              flex: 1;
+              font-size: 1.5rem;
+              word-wrap: break-word;
+              border: none;
+              padding: 0;
+              margin: 15px 0;
+            }
+
+            .year_general {
+              position: absolute;
+              transform: translateY(1430px);
+              text-align: left;
+            }
+
+            .season_title{
+                position: absolute;
+                transform: translateY(1432px);
+                text-align: left;
+                right: 100px;
+            }
+
+            .role_general {
+              position: absolute;
+              transform: translateY(1460px);
+              text-align: left;
+            }
+
+            .role_title {
+              position: absolute;
+              transform: translateY(1460px);
+              text-align: right;
+              right: 100px;
+            }
+
+            .right-side {
+              position: absolute;
+              transform: translateY(1450px);
+              right: 100px;
+              text-align: right;
+            }
+          }
+          .ca_co_desc {
+            color: #C7C7C7;
+            position: absolute;
+            transform: translateY(31rem);
+            left: 5px;
+          }
+          .ca_co_title {
+            position: absolute;
+            transform: translateY(-66rem);
+            color: white;
+            font-size: 2.8rem;
+            font-family: $primary-font;
+          }
         }
 
-        footer{
+        //MU Cloud Section
+        .mu_cloud_section {
+          position: relative;
+          top: 60px;
 
-            .footer_divider{
-                position: relative;
-                right: 20px;
-                width: 100vw;
-                border: 10px solid white;
-                margin: 0;
-                opacity: 1;
+          .mu_cloud {
+            position: relative;
+            display: block;
+            font-size: 2.8rem;
+            top: 100px;
+          }
+
+          .mu_cloud_github {
+            position: relative;
+            text-decoration: none;
+            color: #D3E97A;
+            top: 140px;
+            pointer-events: auto;
+            cursor: pointer;
+            z-index: 10;
+          }
+
+          #mu_cloud_img {
+            position: relative;
+            display: block;
+            top: 130px;
+            right: 33px;
+            width: 100vw;
+            height: 100%;
+          }
+
+          .mu_cloud_desc {
+            position: relative;
+            top: 165px;
+          }
+
+          .mu_cloud_title {
+            position: relative;
+            top: 170px;
+            color: white;
+            font-size: 2.8rem;
+            font-family: $primary-font;
+          }
+
+          #mu_cloud_info {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+            top: 175px;
+            width: 100%;
+            overflow: hidden;
+
+            .mu_cloud_one {
+              flex: 1;
+              text-align: left;
             }
 
-            footer p {
-                margin: .3rem 0;
-                font-size: .7rem;
-                color: #C7C7C7;
+            .mu_cloud_two {
+              flex: 1;
+              text-align: right;
             }
+
+            .list-group-item {
+              padding: 0.3rem 0.6rem;
+              font-size: 1.5rem;
+              word-wrap: break-word;
+              border: none;
+
+              .left-side {
+                text-align: left;
+              }
+
+              .right-side {
+                text-align: right;
+                padding-right: 18.7rem;
+              }
+            }
+          }
         }
+
+        //MU BBall Section
+        .mu_bball_section {
+          position: relative;
+          top: 150px;
+
+          .mu_bball {
+            position: relative;
+            display: block;
+            font-size: 2.5rem;
+            top: 130px;
+          }
+
+          .mu_bball_github {
+            position: relative;
+            text-decoration: none;
+            color: #D3E97A;
+            top: 175px;
+            pointer-events: auto;
+            cursor: pointer;
+            z-index: 10;
+          }
+
+          #mu_bball_img {
+            position: relative;
+            display: block;
+            top: 160px;
+            right: 33px;
+            width: 100vw;
+            height: 100%;
+          }
+
+          .mu_bball_desc {
+            position: relative;
+            top: 195px;
+          }
+
+          .mu_bball_title {
+            position: relative;
+            top: 200px;
+            color: white;
+            font-size: 2.8rem;
+            font-family: $primary-font;
+          }
+
+          #mu_bball_info {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+            top: 210px;
+            width: 100%;
+            overflow: hidden;
+
+            .mu_bball_one {
+              flex: 1;
+              text-align: left;
+            }
+
+            .mu_bball_two {
+              flex: 1;
+              text-align: right;
+            }
+
+            .list-group-item {
+              padding: 0.3rem 0.6rem;
+              font-size: 1.5rem;
+              word-wrap: break-word;
+              border: none;
+
+              .left-side {
+                text-align: left;
+              }
+
+              .right-side {
+                text-align: right;
+                padding-right: 18.7rem;
+              }
+            }
+          }
+        }
+      }
     }
+
+    footer {
+      .footer_divider {
+        position: relative;
+        right: 20px;
+        width: 100vw;
+        border: 10px solid white;
+        margin: 0;
+        opacity: 1;
+      }
+
+      footer p {
+        margin: 0.3rem 0;
+        font-size: 0.7rem;
+        color: #C7C7C7;
+      }
+    }
+  }
 }
+
 @media (min-width: 481px) and (max-width: 768px) {
     /* Tablet styles */
     header {
