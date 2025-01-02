@@ -148,21 +148,16 @@ body {
               width: auto;
               height: auto;
 
-              &.contact_button {
-                position: absolute;
-                top: 320px;
-              }
-
               &.linkedin_button {
                 position: absolute;
                 top: 320px;
-                left: 230px;
+                left: 20px;
               }
 
               &.github_button {
                 position: absolute;
                 top: 320px;
-                left: 314px;
+                left: 100px;
               }
             }
           }

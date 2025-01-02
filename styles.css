@@ -121,19 +121,15 @@ body footer {
     width: auto;
     height: auto;
   }
-  main #about .col .row a .top_buttons.contact_button {
-    position: absolute;
-    top: 320px;
-  }
   main #about .col .row a .top_buttons.linkedin_button {
     position: absolute;
     top: 320px;
-    left: 230px;
+    left: 20px;
   }
   main #about .col .row a .top_buttons.github_button {
     position: absolute;
     top: 320px;
-    left: 314px;
+    left: 100px;
   }
   main #about .col .row #me {
     position: absolute;
