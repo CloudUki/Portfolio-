@@ -52,11 +52,10 @@ body {
   }
 
   footer {
-    color: white;
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     width: 100%;
-    margin-top: auto;
+    background-color: black;
   }
 }
 
@@ -314,43 +313,46 @@ body {
 
         //MU Cloud Section
         .mu_cloud_section {
-          position: relative;
-          top: 60px;
+          padding: 20px;
+          max-width: 100%;
+          margin: auto;
 
           .mu_cloud {
-            position: relative;
+            position: absolute;
             display: block;
-            font-size: 2.8rem;
-            top: 100px;
+            font-size: 2.5rem;
+            transform: translateY(97rem);
+            left: 20px;
           }
 
           .mu_cloud_github {
             position: relative;
             text-decoration: none;
             color: #D3E97A;
-            top: 140px;
+            top: 1699px;
             pointer-events: auto;
             cursor: pointer;
             z-index: 10;
           }
 
           #mu_cloud_img {
-            position: relative;
+            position: absolute;
             display: block;
-            top: 130px;
-            right: 33px;
+            transform: translateY(105rem);
+            right: 0;
             width: 100vw;
-            height: 100%;
+            height: auto;
           }
 
           .mu_cloud_desc {
-            position: relative;
-            top: 165px;
+            color: #C7C7C7;
+            position: absolute;
+            transform: translateY(84rem);
           }
 
           .mu_cloud_title {
-            position: relative;
-            top: 170px;
+            position: absolute;
+            transform: translateY(-9.6rem);
             color: white;
             font-size: 2.8rem;
             font-family: $primary-font;
@@ -358,12 +360,10 @@ body {
 
           #mu_cloud_info {
             display: flex;
-            position: relative;
             justify-content: space-between;
             list-style: none;
             padding: 0;
-            margin: 0 0 15px 0;
-            top: 175px;
+            margin: 15px 0;
             width: 100%;
             overflow: hidden;
 
@@ -372,68 +372,72 @@ body {
               text-align: left;
             }
 
-            .mu_cloud_two {
-              flex: 1;
-              text-align: right;
-            }
-
             .list-group-item {
-              padding: 0.3rem 0.6rem;
+              flex: 1;
               font-size: 1.5rem;
               word-wrap: break-word;
               border: none;
+              padding: 0;
+              margin: 15px 0; 
+            }
 
-              .left-side {
+            .mu_year_general {
+                position: absolute;
+                transform: translateY(140.5rem);
                 text-align: left;
-              }
+            }
 
-              .right-side {
+            .mu_year_title {
+                position: absolute;
+                transform: translateY(140.5rem);
                 text-align: right;
-                padding-right: 18.7rem;
-              }
+                right: 100px;
             }
           }
         }
 
         //MU BBall Section
         .mu_bball_section {
-          position: relative;
-          top: 150px;
+          padding: 20px;
+          max-width: 100%;
+          margin: auto;
 
           .mu_bball {
-            position: relative;
+            position: absolute;
             display: block;
-            font-size: 2.5rem;
-            top: 130px;
+            font-size: 2.2rem;
+            transform: translateY(147rem);
+            left: 25px;
           }
 
           .mu_bball_github {
             position: relative;
             text-decoration: none;
             color: #D3E97A;
-            top: 175px;
+            top: 2519px;
             pointer-events: auto;
             cursor: pointer;
             z-index: 10;
           }
 
           #mu_bball_img {
-            position: relative;
+            position: absolute;
             display: block;
-            top: 160px;
-            right: 33px;
+            transform: translateY(154rem);
+            left: 0;
             width: 100vw;
-            height: 100%;
+            height: auto;
           }
 
           .mu_bball_desc {
-            position: relative;
-            top: 195px;
+            color: #C7C7C7;
+            position: absolute;
+            transform: translateY(135rem);
           }
 
           .mu_bball_title {
-            position: relative;
-            top: 200px;
+            position: absolute;
+            transform: translateY(41.5rem);
             color: white;
             font-size: 2.8rem;
             font-family: $primary-font;
@@ -441,12 +445,10 @@ body {
 
           #mu_bball_info {
             display: flex;
-            position: relative;
             justify-content: space-between;
             list-style: none;
             padding: 0;
-            margin: 0 0 15px 0;
-            top: 210px;
+            margin: 15px 0;
             width: 100%;
             overflow: hidden;
 
@@ -455,48 +457,69 @@ body {
               text-align: left;
             }
 
-            .mu_bball_two {
-              flex: 1;
-              text-align: right;
-            }
-
             .list-group-item {
-              padding: 0.3rem 0.6rem;
+                flex: 1;
               font-size: 1.5rem;
               word-wrap: break-word;
               border: none;
+              padding: 0;
+              margin: 15px 0;
+            }
+        
+            .bball_general {
+              position: absolute;
+              transform: translateY(187.5rem);
+              text-align: left;
+            }
 
-              .left-side {
-                text-align: left;
-              }
-
-              .right-side {
-                text-align: right;
-                padding-right: 18.7rem;
-              }
+            .bball_title {
+            position: absolute;
+            transform: translateY(187.5rem);
+            text-align: left;
+            right: 100px;
             }
           }
         }
       }
     }
+}
 
-    footer {
-      .footer_divider {
-        position: relative;
-        right: 20px;
-        width: 100vw;
-        border: 10px solid white;
-        margin: 0;
-        opacity: 1;
-      }
+footer {
+    padding: 20px;
+    margin: auto;
 
-      footer p {
-        margin: 0.3rem 0;
-        font-size: 0.7rem;
-        color: #C7C7C7;
-      }
-    }
+  .footer_divider {
+    right: 20px;
+    height: 1px;
+    width: 100vw;
+    border: none;
+    margin: 1rem auto;
+    opacity: 1;
   }
+
+  .footer_info{
+    position: absolute;
+    transform: translateY(172rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: auto;
+    width: 90%;
+  }
+
+  p {
+    margin: 0.3rem 0;
+    font-size: 0.7rem;
+    color: #C7C7C7;
+  }
+
+  .email_icon{
+    color: #D3E97A;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+}
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
