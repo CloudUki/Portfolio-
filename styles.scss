@@ -26,7 +26,6 @@ body {
   header {
     background-color: black;
     color: white;
-    padding: 0.6rem 0;
     text-align: center;
 
     .topnav #myLinks {
@@ -64,7 +63,6 @@ body {
   /* Phone styles */
   header {
     font-size: 1rem;
-    padding: 0.3rem 0;
 
     .topnav {
       overflow: hidden;
@@ -91,19 +89,6 @@ body {
       transform: translateX(-128px);
     }
 
-    .topnav #myLinks {
-      display: block; /* Hide links by default */
-    }
-
-    .topnav a.icon {
-      color: white;
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 6px;
-      padding: 0.8rem 1rem;
-    }
-
     .topnav a:hover {
       color: white;
     }
@@ -113,9 +98,89 @@ body {
       color: white;
     }
 
+    .navbar-toggler {
+        background: transparent;
+        border: none;
+        padding: 0.5rem;
+        position: relative;
+        top: -58px;
+        left: 180px;
+      
+        .bar {
+          display: block;
+          width: 25px;
+          height: 3px;
+          margin: 5px auto;
+          background-color: white;
+          transition: all 0.3s ease-in-out;
+        }
+      
+        &.collapsed {
+          .bar:nth-child(2) {
+            opacity: 1; /* Ensure middle bar is visible when collapsed */
+          }
+      
+          .bar:nth-child(1),
+          .bar:nth-child(3) {
+            transform: none; /* Reset transform for collapsed state */
+          }
+        }
+      
+        &:not(.collapsed) {
+          .bar:nth-child(2) {
+            opacity: 0; /* Hide middle bar when expanded */
+          }
+      
+          .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg); /* Create X shape */
+          }
+      
+          .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg); /* Create X shape */
+          }
+        }
+      }
+      
+      .navbar-collapse {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0,0,0,0.9);
+        z-index: 1000;
+        &.collapse {
+          display: none; /* Hidden by default */
+        }
+      
+        &.show {
+          display: block; /* Shown when toggled */
+        }
+      
+        ul {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+      
+          li {
+            list-style: none;
+            margin: 0;
+      
+            .nav-link {
+              color: white;
+              text-decoration: none;
+      
+              &:hover {
+                color: #D3E97A;
+              }
+            }
+          }
+        }
+      }
+      
+
     .nav_divider {
       position: static;
-      width: 100vw;
+      width: 100%;
       border: 10px solid white;
       margin: 0;
       opacity: 1;
@@ -494,7 +559,7 @@ footer {
 
   .footer_info{
     position: absolute;
-    transform: translateY(172rem);
+    transform: translateY(174rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -517,22 +582,95 @@ footer {
 }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
-    /* Tablet styles */
-    header {
-        font-size: 1.4em;
-    }
-
-    main {
-        padding: .9rem;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1440px) {
     /* Laptop styles */
+    // header {
+    //     font-size: 1rem;
+    //     padding: 0.3rem 0;
+
+    //     .topnav{
+    //         display: flex;
+    //         justify-content: space-between;
+    //         align-items: center;
+    //         overflow: hidden;
+    //         position: static;
+    //         transform: translateY(5px);
+
+    //         .logo{
+    //             display: block;
+    //             position: absolute;
+    //             text-decoration: none;
+    //             font-family: $primary-font;
+    //             color: white;
+    //             font-weight: bold;
+    //             font-size: 1.8rem;
+    //         }
+
+    //         #myLinks {
+    //             display: flex; /* Hide links by default */
+    //             gap: 1rem;
+    
+    //             a {
+    //                 color: white;
+    //                 padding: 0.8rem 1rem;
+    //                 text-decoration: none;
+    //                 font-size: 1rem;
+    //                 display: block; /* Display links vertically in smaller screens */
+    //             }
+    //         } 
+    //     }
+    // }
     header {
-        font-size: 1.6em;
-    }
+        font-size: 1rem;
+        padding: 0.3rem 0;
+        .topnav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.5rem 1rem;
+      
+          .logo {
+            font-size: 1.8rem;
+            font-family: $primary-font;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+          }
+      
+          #myLinks {
+            display: flex;
+            gap: 1rem;
+      
+            a {
+              color: white;
+              text-decoration: none;
+              font-size: 5rem;
+              padding: 0.5rem;
+      
+              &:hover {
+                color: #D3E97A;
+              }
+            }
+          }
+
+          .about-section{
+            display: block;
+            gap: 1rem;
+            color: white;
+          }
+      
+          .icon {
+            display: none;
+          }
+        }
+      
+        .nav_divider {
+          width: 100%;
+          border: 1px solid white;
+          margin-top: 0.5rem;
+        }
+      }
+      
 
     main {
         padding: 1.5rem;

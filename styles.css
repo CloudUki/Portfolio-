@@ -20,7 +20,6 @@ body {
 body header {
   background-color: black;
   color: white;
-  padding: 0.6rem 0;
   text-align: center;
 }
 body header .topnav #myLinks {
@@ -52,7 +51,6 @@ body footer {
   /* Phone styles */
   header {
     font-size: 1rem;
-    padding: 0.3rem 0;
   }
   header .topnav {
     overflow: hidden;
@@ -76,17 +74,6 @@ body footer {
     font-size: 1.8rem;
     transform: translateX(-128px);
   }
-  header .topnav #myLinks {
-    display: block; /* Hide links by default */
-  }
-  header .topnav a.icon {
-    color: white;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 6px;
-    padding: 0.8rem 1rem;
-  }
   header .topnav a:hover {
     color: white;
   }
@@ -94,9 +81,71 @@ body footer {
     background-color: white;
     color: white;
   }
+  header .navbar-toggler {
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    position: relative;
+    top: -58px;
+    left: 180px;
+  }
+  header .navbar-toggler .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  header .navbar-toggler.collapsed .bar:nth-child(2) {
+    opacity: 1; /* Ensure middle bar is visible when collapsed */
+  }
+  header .navbar-toggler.collapsed .bar:nth-child(1),
+  header .navbar-toggler.collapsed .bar:nth-child(3) {
+    transform: none; /* Reset transform for collapsed state */
+  }
+  header .navbar-toggler:not(.collapsed) .bar:nth-child(2) {
+    opacity: 0; /* Hide middle bar when expanded */
+  }
+  header .navbar-toggler:not(.collapsed) .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Create X shape */
+  }
+  header .navbar-toggler:not(.collapsed) .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Create X shape */
+  }
+  header .navbar-collapse {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+  }
+  header .navbar-collapse.collapse {
+    display: none; /* Hidden by default */
+  }
+  header .navbar-collapse.show {
+    display: block; /* Shown when toggled */
+  }
+  header .navbar-collapse ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  header .navbar-collapse ul li {
+    list-style: none;
+    margin: 0;
+  }
+  header .navbar-collapse ul li .nav-link {
+    color: white;
+    text-decoration: none;
+  }
+  header .navbar-collapse ul li .nav-link:hover {
+    color: #D3E97A;
+  }
   header .nav_divider {
     position: static;
-    width: 100vw;
+    width: 100%;
     border: 10px solid white;
     margin: 0;
     opacity: 1;
@@ -414,7 +463,7 @@ body footer {
   }
   footer .footer_info {
     position: absolute;
-    transform: translateY(172rem);
+    transform: translateY(174rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -433,19 +482,50 @@ body footer {
     margin-left: 0.5rem;
   }
 }
-@media (min-width: 481px) and (max-width: 768px) {
-  /* Tablet styles */
-  header {
-    font-size: 1.4em;
-  }
-  main {
-    padding: 0.9rem;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1440px) {
   /* Laptop styles */
   header {
-    font-size: 1.6em;
+    font-size: 1rem;
+    padding: 0.3rem 0;
+  }
+  header .topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+  header .topnav .logo {
+    font-size: 1.8rem;
+    font-family: Bebas Neue;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  header .topnav #myLinks {
+    display: flex;
+    gap: 1rem;
+  }
+  header .topnav #myLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 5rem;
+    padding: 0.5rem;
+  }
+  header .topnav #myLinks a:hover {
+    color: #D3E97A;
+  }
+  header .topnav .about-section {
+    display: block;
+    gap: 1rem;
+    color: white;
+  }
+  header .topnav .icon {
+    display: none;
+  }
+  header .nav_divider {
+    width: 100%;
+    border: 1px solid white;
+    margin-top: 0.5rem;
   }
   main {
     padding: 1.5rem;
